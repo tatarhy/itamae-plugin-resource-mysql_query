@@ -27,7 +27,7 @@ module Itamae
 
         def action_run(options)
           user_opt = attributes.user.empty? ? '' : "-u#{attributes.user}"
-          password_opt = attributes.password.empty? ? '' : "-u#{attributes.password}"
+          password_opt = attributes.password.empty? ? '' : "-p#{attributes.password}"
 
           begin
             run_command(%Q{mysql #{user_opt} #{password_opt} < #{@temppath}})
