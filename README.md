@@ -21,16 +21,27 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-package 'mysql-server'
-
-service 'mysql' do
-  action [:start]
-end
+require 'itamae/plugin/resource/mysql_query'
 
 mysql_query 'CREATE DATABASE IF NOT EXISTS itamae_test' do
   user "root"
+  password "passw0rd"
 end
 ```
+
+### Actions
+
+- run
+- nothing
+
+### Attributes
+
+| Name       | Value                | Default            | Required |
+| ---------- | -------------------- | ------------------ | -------- |
+| `action`   | one of Symbol, Array | `:run`             | Yes      |
+| `user`     | String               | (no default)       | No       |
+| `password` | String               | (no default)       | No       |
+| `query`    | String               | (name of resource) | No       |
 
 ## Development
 
