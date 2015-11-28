@@ -1,5 +1,7 @@
 # Itamae::Plugin::Resource::MysqlQuery
 
+[![Gem Version](https://badge.fury.io/rb/itamae-plugin-resource-mysql_query.svg)](https://badge.fury.io/rb/itamae-plugin-resource-mysql_query)
+
 Itamae resource plugin to run mysql query.
 
 ## Installation
